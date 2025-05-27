@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Headache Triage Tool</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      padding: 2rem;
+      color: #1e293b;
+    }
+    .container {
+      max-width: 700px;
+      margin: auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 24px;
+      box-shadow: 0 30px 60px rgba(0,0,0,0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #1e40af;
+      margin-bottom: 2rem;
+    }
+    .question {
+      margin-bottom: 2rem;
+    }
+    .question h2 {
+      font-size: 1.25rem;
+      color: #334155;
+      margin-bottom: 0.75rem;
+    }
+    .option {
+      margin-bottom: 1rem;
+    }
+    .option label {
+      display: block;
+      background: #f8fafc;
+      border: 2px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 1rem;
+      font-size: 1rem;
+      font-weight: 500;
+      color: #1e293b;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .option label:hover {
+      background: #eef2ff;
+      border-color: #6366f1;
+    }
+    .subtext {
+      font-size: 0.875rem;
+      margin-top: 6px;
+      color: #475569;
+    }
+    .result {
+      margin-top: 2rem;
+      background: #e0f2fe;
+      padding: 1.5rem;
+      border-radius: 12px;
+    }
+    .result h3 {
+      margin-top: 0;
+    }
+    .result a {
+      color: #1e3a8a;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Headache Triage Tool</h1>
+
+    <div class="question">
+      <h2>1. Red Flags Present?</h2>
+      <div class="option"><label>❗ Sudden onset thunderclap headache</label></div>
+      <div class="option"><label>⚠️ Neurological deficit or papilloedema</label></div>
+      <div class="option"><label>📅 Change in pattern or progressive headache</label></div>
+    </div>
+
+    <div class="question">
+      <h2>2. Headache Type</h2>
+      <div class="option"><label>🔁 Chronic migraine (≥15 days/month)</label></div>
+      <div class="option"><label>📅 Episodic migraine (4–14 days/month)</label></div>
+      <div class="option"><label>👁️ Cluster headache <span class="subtext">📘 <a href="https://www.bash.org.uk/guidelines/" target="_blank">View BASH guidelines</a></span></label></div>
+    </div>
+
+    <div class="question">
+      <h2>3. Preventatives Tried?</h2>
+      <div class="option">
+        <label>
+          ❌ Failed ≥3 preventatives (≥2–3 months each at adequate dose)
+          <div class="subtext">
+            Recommended in Calderdale: Amitriptyline, Nortriptyline, Propranolol, Topiramate
+          </div>
+        </label>
+      </div>
+      <div class="option">
+        <label>
+          ⏳ Not yet tried 3 preventatives
+          <div class="subtext">
+            Try another preventative · <a href="https://www.nhs.uk/live-well/" target="_blank">NHS lifestyle tips</a> · <a href="https://www.nice.org.uk/guidance/cg150/chapter/1-Guidance#medication-overuse-headache" target="_blank">NICE overuse advice</a>
+          </div>
+        </label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h2>4. GP Discretion</h2>
+      <div class="option">
+        <label>
+          🩺 Consider referral despite guidance
+          <div class="subtext">
+            e.g., severe anxiety, frequent ED attenders, inability to trial preventatives
+          </div>
+        </label>
+      </div>
+    </div>
+
+    <div class="result">
+      <h3>💊 GMMMG Dosing Info:</h3>
+      <ul>
+        <li>Amitriptyline: start 10 mg at night → up to 30–50 mg</li>
+        <li>Nortriptyline: same as amitriptyline</li>
+        <li>Propranolol: start 40 mg BD → up to 80 mg BD</li>
+        <li>Topiramate: start 25 mg at night → 50–100 mg/day</li>
+      </ul>
+      <p>Trial each ≥8–12 weeks at max tolerated dose before assessing failure.</p>
+    </div>
+
+  </div>
+</body>
+</html>
